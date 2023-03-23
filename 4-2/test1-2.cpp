@@ -1,5 +1,6 @@
 #include "SqList.cpp"
 
+//change~~
 void sortList(SqList *L){
       for (size_t i = L->length-1 ;i>0;i--)
       {
