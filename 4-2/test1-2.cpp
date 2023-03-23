@@ -1,16 +1,16 @@
 #include "SqList.cpp"
 
-void sortList(SqList &L){
-      for (size_t i = L.length-1 ;i>0;i--)
+void sortList(SqList *L){
+      for (size_t i = L->length-1 ;i>0;i--)
       {
         for (size_t j = 0; j<i; j++)
         {
-            if (L.elem[j]>L.elem[j+1])
+            if (L->elem[j]>L->elem[j+1])
             {
                 /* code */
-                ElemType temp = L.elem[j];
-                L.elem[j] = L.elem[j+1];
-                L.elem[j+1] = temp;
+                ElemType temp = L->elem[j];
+                L->elem[j] = L->elem[j+1];
+                L->elem[j+1] = temp;
             }
             
         }
@@ -31,6 +31,6 @@ int main(){
     }
 
     toStringList(*sq);
-    sortList(*sq);
+    sortList(sq);
     toStringList(*sq);
 }
